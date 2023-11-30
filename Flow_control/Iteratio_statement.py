@@ -181,16 +181,112 @@
 # 1.Find all of the words in a string that are less than 5 char
 # 2.Count the number of space in a string]
 
+# 1.Find all of the words in a string that are less than 5 char
+# str = 'This a very large city in my village surronding'
+#
+# # var = [each_word for each_word in str.split() if len(each_word)<5]
+#
+# var = [element for element in str.split() if len(element)<5]
+# print(var)
+
+# 2.Count the number of space in a string]
+# str = 'This a very large city in my village surronding'
+#
+# var =sum([1 for char in str if char== ' '])
+# print(var)
+
 ########################################################
+#-----------------------------List Qurstion -----------------------------------------
+
+# 1. Find the duplicate of list and remove it without using any inbuilt function
+# 2. Reverse a list  without using any inbuilt function
+# 3. fetch the data in nested list and add them
+# 4. Swap a list without using any inbuilt function accending to decending
+# 5. [2,[4,5],[4,,5,6],9] add this nested list
 # 6. In a list if string their remove it without using any inbuilt function.
+
+'''Find the duplicate of list and remove it without using any inbuilt function'''
+
+# li = [1,2,3,4,1,2,3,5,6,7,7,7,8,8]
+# unique_list = []
+
+# for i in li:
+#     if i not in unique_list:
+#         unique_list.append(i)
+# print(unique_list)
+
+#list comprehension
+# var = [unique_list.append(i) for i in li if i not in unique_list]
+# print(unique_list)
+
+
+''' 2. Reverse a list  without using any inbuilt function'''
+
+# li = [1,2,3,4,5]
+#
+# start_index = 0
+# end_index = len(li)-1
+#
+# while start_index<end_index:
+#     li[start_index],li[end_index] = li[end_index],li[start_index]
+#     start_index = start_index+1
+#     end_index = end_index-1
+#
+# print(li)
+
+'''# 3. fetch the data in nested list and add them'''
+
+# li = [
+#     [1,2,3],
+#     [3,4,5],
+#     [9,8,7]
+# ]
+#
+# for element in li:
+#     for i in element:
+#         print(i)
+
+
+
+
+
+'''4. Swap a list without using any inbuilt function accending to decending'''
+
+# li = [3,1,4,2,5] # 3>1, 3>4, 3>2
+#
+# for i in range(len(li)):#i = 0,1,2,3,
+#     for j in range(i+1,len(li)):#j=1,2,3 , j = 2,3  j = 3
+#         if li[i]>li[j]:
+#             li[i],li[j] = li[j],li[i]
+# print(li)
+
+
+'''# 5. [2,[4,5],[4,5,6],9] add this nested list'''
+
+# li = [2,[4,5],[4,5,[6,8]],9]
+#
+# def recursive_sum(li):
+#     sum = 0
+#     for i in li:
+#         if isinstance(i,list):
+#             sum = sum + recursive_sum(i)
+#         else:
+#             sum = sum+i
+#     return sum
+# print(recursive_sum(li))
+#
+
 li = [12,13,1,4,'89','uo'] # don's use remove
-list_of_numbers = []
-
-for i in li:
-    # print(type(i))
-    if type(i) == str:
-        continue
-    else:
-        list_of_numbers.append(i)
-
-print(list_of_numbers)
+#############################################################################33
+# 6. In a list if string their remove it without using any inbuilt function.
+# li = [12,13,1,4,'89','uo'] # don's use remove
+# list_of_numbers = []
+#
+# for i in li:
+#     # print(type(i))
+#     if type(i) == str:
+#         continue
+#     else:
+#         list_of_numbers.append(i)
+#
+# print(list_of_numbers)

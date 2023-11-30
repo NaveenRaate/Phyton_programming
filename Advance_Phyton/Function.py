@@ -30,3 +30,13 @@
 #         print(str,'not a palindrome')
 #
 # palindrome('level')
+
+###############################################
+new_list=[]
+def remove_duplicate(*args):
+    for i in args:
+        if i not in new_list:
+            new_list.append(i)
+    print(new_list)
+
+remove_duplicate(1,1,1,2,2,2,89,89,78,54,12)
